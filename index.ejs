@@ -1,0 +1,30 @@
+<%- include('./partials/header'); %>
+    <h1>Welcome
+        <%= name %>
+    </h1>
+    <center>
+        <h1>UPG Dashboard</h1>
+    </center>
+    <div class=dashcontainer>
+
+
+        <div class="buttonWrapper">
+            <a href="/passwordgen">
+                <button>Password Generator</button>
+            </a>
+        </div>
+        <div class="buttonWrapper">
+            <a href="/vault">
+                <button>vault</button>
+            </a>
+        </div>
+        <div class="buttonWrapper">
+            <a href="/encrypt">
+                <button>encrypt</button>
+            </a>
+        </div>
+    </div>
+
+    <form action="/logout?_method=DELETE" method="POST">
+        <button type="submit">Log Out</button>
+    </form>

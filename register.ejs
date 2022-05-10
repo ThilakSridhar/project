@@ -1,0 +1,43 @@
+<%- include('./partials/header'); %>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <% if (messages.error) { %>
+            <%= messages.error %>
+                <% } %>
+    </head>
+
+    <body id="regbody">
+        <div class="container2">
+            <div class="screen2">
+                <div class="screen__content2">
+                    <form action="/register" class="register" method="POST">
+                        <center>
+                            <h1>REGISTRATION</h1>
+                        </center>
+                        <div class="login__field2">
+                            <i class="login__icon fas fa-user"></i>
+                            <input type="text" class="login__input2" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="login__field2">
+                            <i class="login__icon fas fa-user"></i>
+                            <input type="email" class="login__input2" id="email" name="email" placeholder=" Email" required>
+                        </div>
+                        <div class="login__field2">
+                            <i class="login__icon fas fa-user"></i>
+                            <input type="password" class="login__input2" id="password" name="password" placeholder="password" required>
+                        </div>
+                        <button class="button login__submit">
+                      <span class="button__text" type="submit ">Register</span>
+                      <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                        <button class="button login__submit">
+                        <span class="button__text" type="submit "><a href="/login">LogIn</a></span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                      </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
